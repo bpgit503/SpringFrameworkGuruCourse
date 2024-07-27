@@ -9,11 +9,11 @@ public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String firstName;
     private String lastName;
 
-    @ManyToMany(mappedBy = "authorst")
+    @ManyToMany(mappedBy = "authors")
     private Set<Book> books;
 
     public Set<Book> getBooks() {
@@ -24,11 +24,11 @@ public class Author {
         this.books = books;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
